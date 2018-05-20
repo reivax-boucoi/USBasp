@@ -67,18 +67,18 @@
 #define USBASP_ISP_SCK_1500   12  /* 1.5 MHz   */
 
 /* macros for gpio functions */
-#define ledRedOn()    PORTC &= ~(1 << PC1)
-#define ledRedOff()   PORTC |= (1 << PC1)
-#define ledGreenOn()  PORTC &= ~(1 << PC0)
-#define ledGreenOff() PORTC |= (1 << PC0)
+#define ledRedOn()    PORTC &= ~(1 << PC0)
+#define ledRedOff()   PORTC |= (1 << PC0)
+#define ledGreenOn()  PORTC &= ~(1 << PC1)
+#define ledGreenOff() PORTC |= (1 << PC1)
 
-#define isLedRedOff()   (PORTC & (1 << PC1))
+#define isLedRedOff()   (PORTC & (1 << PC0))
 #define isLedRedOn()    ~(isLedRedOff())
-#define isLedGreenOff() (PORTC & (1 << PC0))
+#define isLedGreenOff() (PORTC & (1 << PC1))
 #define isLedGreenOn()  ~(isLedGreenOff())
 
-#define toggleLedRed()  PORTC ^= (1 << PC1)
-#define toggleLedGreen()  PORTC ^= (1 << PC0)
+#define toggleLedRed()  PORTC ^= (1 << PC0)
+#define toggleLedGreen()  PORTC ^= (1 << PC1)
 
 
 #endif /* USBASP_H_ */

@@ -357,7 +357,7 @@ int main(void) {
 
 	/* all inputs except PC0, PC1 */
 	DDRC = 0x03;
-	PORTC = 0xfe;
+	PORTC = 0xfd;
 
 	/* init timer */
 	clockInit();
